@@ -1,0 +1,836 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/pl_cust_segment",
+    "language" : "python",
+    "fabricId" : "10236",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "ruchacloudaeonnetteam.projectcustomersegment.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "pl_cust_segment",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "K2LkWjXX6EIh7l-Mzgg_O",
+    "source" : "GXd0oz5CN3mLttWxz5_R5$$gMSPLkpaz1K7YjJBltDwt",
+    "sourcePort" : "-DcdYOPcx1sPyWP3LX79L$$FKPZf2e_xf4kcd1cmgQh-",
+    "target" : "MpEPhUXjO_V6Pe-m5NbjF$$rw3juVUNsyRkde_qAInRv",
+    "targetPort" : "NJOIn5xbcGwhr6Sv463iE$$2D2jpeveav9yejVaSoQoP"
+  }, {
+    "id" : "qSKKMdel4jxu-fSrxeKzs",
+    "source" : "UQO-YMvZJztA59caQShC4$$0WnDW3t5N7iXy5QxIiqFh",
+    "sourcePort" : "Q9GJj8bZGnOS_z3lHTxsd$$97XoeqfQWY0jPw_BU5FZh",
+    "target" : "E5o7BD0Q9Hbk1ERol66FR$$L4lQh2OrgfM9cuX5PWti1",
+    "targetPort" : "aaBAUTuQe0iDzhEi1SV8b$$5o0cJSLWCBd5JOuF4mNQA"
+  }, {
+    "id" : "mhKV10jhfBoySdYjvSzQg",
+    "source" : "GXd0oz5CN3mLttWxz5_R5$$gMSPLkpaz1K7YjJBltDwt",
+    "sourcePort" : "-DcdYOPcx1sPyWP3LX79L$$FKPZf2e_xf4kcd1cmgQh-",
+    "target" : "E5o7BD0Q9Hbk1ERol66FR$$L4lQh2OrgfM9cuX5PWti1",
+    "targetPort" : "rY3kicFzRYa1ueu4p_hFW$$9YXD6ITlPmKtO5BjGMNoY"
+  }, {
+    "id" : "m5C3aK0gA5lSiPT8PjBOk$$BvrjQvY9pG_KneEtRGczD",
+    "source" : "MpEPhUXjO_V6Pe-m5NbjF$$rw3juVUNsyRkde_qAInRv",
+    "sourcePort" : "EkPkdgDsxaYGhX3okObNX$$E0NHZxS-HRrD5gneFAxVy",
+    "target" : "51KNtLlAUKHL-GkgJzgBf$$cJQOWoCA6lEBkgrPk63KI",
+    "targetPort" : "IbjMCb-K27mfjSzmICd4H$$UkjSmI7QUBY-J3niu1luo"
+  }, {
+    "id" : "nSUqk0hDpesIEFU8j-vzs$$iUDFVAlW5kMIEPD5Kca6u",
+    "source" : "3CUkXT8_82_3RdJ6Dmtfj$$Lh8dOL-X7nPme6DCqwWZv",
+    "sourcePort" : "BIm7G4kIyaooPYr4nCjOd$$Ab5bSrrjPedXe_ifsVrD0",
+    "target" : "HqyRB0n3cF-98sAbIfjy_$$hn_3rc6S9lf6tOjYD1QCN",
+    "targetPort" : "ZLCjoIWo0Ri_uNRYYGJdH$$VEvb9IWZPQZ8ancCEylAt"
+  }, {
+    "id" : "J83-0RQspd6OMeuqG1sgK",
+    "source" : "HqyRB0n3cF-98sAbIfjy_$$hn_3rc6S9lf6tOjYD1QCN",
+    "sourcePort" : "uUpuiERA4W9rgUhEVcimt$$AxK-txHsDy7oSzQYBUsoy",
+    "target" : "MpEPhUXjO_V6Pe-m5NbjF$$rw3juVUNsyRkde_qAInRv",
+    "targetPort" : "FQHcwQlhjhiKNAf7LeKRy$$ioKk6w8e4hU0vkejfrHQT"
+  }, {
+    "id" : "9iKWYF3F2JPh4BGwdgOif$$ZpyHY8JUNcY6C9z20d53t",
+    "source" : "51KNtLlAUKHL-GkgJzgBf$$cJQOWoCA6lEBkgrPk63KI",
+    "sourcePort" : "gTZKTLxePvT8C33KCkhss$$OmQjg381dEw0POZif2ROr",
+    "target" : "Z-f5P6bvT_LS6ITyS3pxJ$$KtjDgvhv_cjY1mIFq7j8-",
+    "targetPort" : "m7QTI3wKy9wDosf5eBSw-$$ZHFUCV9uP69GfMEuutCba"
+  } ],
+  "processes" : {
+    "MpEPhUXjO_V6Pe-m5NbjF$$rw3juVUNsyRkde_qAInRv" : {
+      "id" : "MpEPhUXjO_V6Pe-m5NbjF$$rw3juVUNsyRkde_qAInRv",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "by_customer_id_inner_join",
+        "slug" : "by_customer_id_inner_join",
+        "x" : -720,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FQHcwQlhjhiKNAf7LeKRy$$ioKk6w8e4hU0vkejfrHQT",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Cust_Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "NJOIn5xbcGwhr6Sv463iE$$2D2jpeveav9yejVaSoQoP",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "OrderID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CustomerID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ProductID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Quantity",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Price",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "EkPkdgDsxaYGhX3okObNX$$E0NHZxS-HRrD5gneFAxVy",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Cust_Id=in1.CustomerID"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "FQHcwQlhjhiKNAf7LeKRy$$ioKk6w8e4hU0vkejfrHQT",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "NJOIn5xbcGwhr6Sv463iE$$2D2jpeveav9yejVaSoQoP",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "NJOIn5xbcGwhr6Sv463iE$$2D2jpeveav9yejVaSoQoP##CustomerID", "FQHcwQlhjhiKNAf7LeKRy$$ioKk6w8e4hU0vkejfrHQT##Cust_Id" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "3CUkXT8_82_3RdJ6Dmtfj$$Lh8dOL-X7nPme6DCqwWZv" : {
+      "id" : "3CUkXT8_82_3RdJ6Dmtfj$$Lh8dOL-X7nPme6DCqwWZv",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "cutomer_data",
+        "slug" : "cutomer_data",
+        "x" : -1160,
+        "y" : -480,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "BIm7G4kIyaooPYr4nCjOd$$Ab5bSrrjPedXe_ifsVrD0",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/cutomer_data"
+      }
+    },
+    "GXd0oz5CN3mLttWxz5_R5$$gMSPLkpaz1K7YjJBltDwt" : {
+      "id" : "GXd0oz5CN3mLttWxz5_R5$$gMSPLkpaz1K7YjJBltDwt",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "product_order_data",
+        "slug" : "product_order_data",
+        "x" : -1160,
+        "y" : -180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "-DcdYOPcx1sPyWP3LX79L$$FKPZf2e_xf4kcd1cmgQh-",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/product_order_data"
+      }
+    },
+    "Z-f5P6bvT_LS6ITyS3pxJ$$KtjDgvhv_cjY1mIFq7j8-" : {
+      "id" : "Z-f5P6bvT_LS6ITyS3pxJ$$KtjDgvhv_cjY1mIFq7j8-",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "ds_total_purchase_amount",
+        "slug" : "ds_total_purchase_amount",
+        "x" : -300,
+        "y" : -420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "m7QTI3wKy9wDosf5eBSw-$$ZHFUCV9uP69GfMEuutCba",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Cust_Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Total_Purchase_Amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ds_total_purchase_amount"
+      }
+    },
+    "E5o7BD0Q9Hbk1ERol66FR$$L4lQh2OrgfM9cuX5PWti1" : {
+      "id" : "E5o7BD0Q9Hbk1ERol66FR$$L4lQh2OrgfM9cuX5PWti1",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "by_product_id_left_outer_join",
+        "slug" : "by_product_id_left_outer_join",
+        "x" : -840,
+        "y" : -120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "rY3kicFzRYa1ueu4p_hFW$$9YXD6ITlPmKtO5BjGMNoY",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "OrderID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CustomerID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ProductID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Quantity",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Price",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "aaBAUTuQe0iDzhEi1SV8b$$5o0cJSLWCBd5JOuF4mNQA",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ProductID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Brand",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "Nj7VnoCNOe2vTKmvTmIh0$$aZeBp4Wn68u_HCWEadHRt",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ProductID = in1.ProductID"
+          },
+          "joinType" : "left_outer"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "rY3kicFzRYa1ueu4p_hFW$$9YXD6ITlPmKtO5BjGMNoY",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "aaBAUTuQe0iDzhEi1SV8b$$5o0cJSLWCBd5JOuF4mNQA",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "aaBAUTuQe0iDzhEi1SV8b$$5o0cJSLWCBd5JOuF4mNQA##ProductID", "rY3kicFzRYa1ueu4p_hFW$$9YXD6ITlPmKtO5BjGMNoY##ProductID" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "WIplMM8h4Wz4HQEvqUm5R$$QDydufZvAhY4k22_BrhRG" : {
+      "id" : "WIplMM8h4Wz4HQEvqUm5R$$QDydufZvAhY4k22_BrhRG",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "category_descrip",
+        "slug" : "category_descrip",
+        "x" : -1160,
+        "y" : -680,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0i8CAdn_m148IVGlG3GZQ$$nUg77CR2nSncktzT1Swmv",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/category_descrip"
+      }
+    },
+    "UQO-YMvZJztA59caQShC4$$0WnDW3t5N7iXy5QxIiqFh" : {
+      "id" : "UQO-YMvZJztA59caQShC4$$0WnDW3t5N7iXy5QxIiqFh",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "product_details",
+        "slug" : "product_details",
+        "x" : -1140,
+        "y" : -40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Q9GJj8bZGnOS_z3lHTxsd$$97XoeqfQWY0jPw_BU5FZh",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/product_details"
+      }
+    },
+    "HqyRB0n3cF-98sAbIfjy_$$hn_3rc6S9lf6tOjYD1QCN" : {
+      "id" : "HqyRB0n3cF-98sAbIfjy_$$hn_3rc6S9lf6tOjYD1QCN",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "rename_customer_id_to_cust_id",
+        "slug" : "rename_customer_id_to_cust_id",
+        "x" : -960,
+        "y" : -480,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZLCjoIWo0Ri_uNRYYGJdH$$VEvb9IWZPQZ8ancCEylAt",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "CustomerID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "uUpuiERA4W9rgUhEVcimt$$AxK-txHsDy7oSzQYBUsoy",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Cust_Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "out0 = in0.withColumnRenamed(\"CustomerID\", \"Cust_Id\")",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "51KNtLlAUKHL-GkgJzgBf$$cJQOWoCA6lEBkgrPk63KI" : {
+      "id" : "51KNtLlAUKHL-GkgJzgBf$$cJQOWoCA6lEBkgrPk63KI",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "total_purchase_amount_by_customer",
+        "slug" : "total_purchase_amount_by_customer",
+        "x" : -520,
+        "y" : -420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "IbjMCb-K27mfjSzmICd4H$$UkjSmI7QUBY-J3niu1luo",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Cust_Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OrderID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CustomerID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ProductID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Quantity",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Price",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "gTZKTLxePvT8C33KCkhss$$OmQjg381dEw0POZif2ROr",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Cust_Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Total_Purchase_Amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "out0 = in0.drop(\"CustomerID\").groupBy(\"Cust_Id\").agg(sum(\"Price\").alias(\"Total_Purchase_Amount\"))",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
