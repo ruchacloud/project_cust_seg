@@ -2,16 +2,16 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: Cust_Id
+  - name: CustomerID
     type: string
     nullable: true
     metadata:
       description: ''
       mappings: []
       tags: []
-  - name: TotalPurchase
-    type: double
-    nullable: true
+  - name: Frequency
+    type: long
+    nullable: false
     metadata:
       description: ''
       mappings: []

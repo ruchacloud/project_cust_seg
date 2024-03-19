@@ -15,11 +15,17 @@ def pipeline(spark: SparkSession) -> None:
         df_rename_customer_id_to_cust_id, 
         df_product_order_data
     )
-    df_total_purchase_amount_by_customer = total_purchase_amount_by_customer(spark, df_by_customer_id_inner_join)
-    ds_total_purchase_amount(spark, df_total_purchase_amount_by_customer)
     df_product_details = product_details(spark)
     df_by_product_id_left_outer_join = by_product_id_left_outer_join(spark, df_product_order_data, df_product_details)
+    df_avg_basket_size_by_order_id = avg_basket_size_by_order_id(spark, df_by_product_id_left_outer_join)
+    df_total_purchase_amount_by_customer = total_purchase_amount_by_customer(spark, df_by_customer_id_inner_join)
+    ds_total_purchase_amount(spark, df_total_purchase_amount_by_customer)
+    df_Frequency = Frequency(spark, df_by_product_id_left_outer_join)
+    df_customers_projection = customers_projection(spark, df_rename_customer_id_to_cust_id)
     df_category_descrip = category_descrip(spark)
+    ds_frequency_purchases(spark, df_Frequency)
+    ds_demographics(spark, df_customers_projection)
+    ds_avg_basket_size(spark, df_avg_basket_size_by_order_id)
 
 def main():
     spark = SparkSession.builder\

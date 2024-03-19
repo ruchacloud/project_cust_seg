@@ -26,6 +26,9 @@ pipelines:
       - datasets/product_details
       - datasets/product_order_data
       outputs:
+      - datasets/ds_avg_basket_size
+      - datasets/ds_demographics
+      - datasets/ds_frequency_purchases
       - datasets/ds_total_purchase_amount
     subgraphs: []
     dependencies: {}
@@ -108,6 +111,45 @@ datasets:
         description: ''
         author: rucha@cloudaeon.net
         createdAt: '2024-03-19 11:54:18'
+  datasets/ds_frequency_purchases:
+    name: ds_frequency_purchases
+    description: ''
+    author: rucha@cloudaeon.net
+    createdAt: '2024-03-19 12:43:43'
+    mode: batch
+    physicalDatasets:
+      fabric-rucha:
+        fabricId: 10236
+        datasetType: File
+        description: ''
+        author: rucha@cloudaeon.net
+        createdAt: '2024-03-19 12:43:43'
+  datasets/ds_avg_basket_size:
+    name: ds_avg_basket_size
+    description: ''
+    author: rucha@cloudaeon.net
+    createdAt: '2024-03-19 13:26:50'
+    mode: batch
+    physicalDatasets:
+      fabric-rucha:
+        fabricId: 10236
+        datasetType: File
+        description: ''
+        author: rucha@cloudaeon.net
+        createdAt: '2024-03-19 13:26:50'
+  datasets/ds_demographics:
+    name: ds_demographics
+    description: ''
+    author: rucha@cloudaeon.net
+    createdAt: '2024-03-19 13:28:53'
+    mode: batch
+    physicalDatasets:
+      fabric-rucha:
+        fabricId: 10236
+        datasetType: File
+        description: ''
+        author: rucha@cloudaeon.net
+        createdAt: '2024-03-19 13:28:53'
 templates: {}
 jobs: {}
 gemContainer:

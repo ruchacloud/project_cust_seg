@@ -6,5 +6,7 @@ from prophecy.libs import typed_lit
 from pl_cust_segment.config.ConfigStore import *
 from pl_cust_segment.udfs.UDFs import *
 
-def by_product_id_left_outer_join(spark: SparkSession, in0: DataFrame, in1: DataFrame, ) -> DataFrame:
-    return in0.alias("in0").join(in1.alias("in1"), (col("in0.ProductID") == col("in1.ProductID")), "inner")
+def customers_projection(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    out0 = in0.select(col("Cust_Id"), col("Age").cast("int"), col("Gender"), col("Location"))
+
+    return out0
